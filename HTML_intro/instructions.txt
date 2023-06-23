@@ -1,0 +1,16 @@
+For this project, please install the required dependencies and modules which are listed in the requirements.txt file.
+
+To install these requirements will isolate the project environment from the system global environment eliminating possible package conflicts.
+
+Depending on your Operating System, you will create your virtual environment differently. Please check online to see how to create a virtual environment for your operating system.
+
+After creating the virtual environment, you will have to run this command:
+    pip install -r requirements.txt
+    pip3 install -r reqirements.txt
+    - If pip doesn't work, use pip3.
+
+Also note that this project uses sqlite3 and for that, you will have to install globally a sqlite3 package so that you can interact with the tables and the database schema.
+    - To install sqlite3, run the following command.
+        sudo apt install sqlite3
+
+Have fun with the project.
