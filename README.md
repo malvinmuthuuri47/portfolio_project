@@ -6,3 +6,5 @@ Contributors:
 Malvin Muthuuri
 Benjamin Princewill
 ifedolapo Nifemi
+
+The new requirements file (requirements_for_windows.txt) is configured to work on windows OS
