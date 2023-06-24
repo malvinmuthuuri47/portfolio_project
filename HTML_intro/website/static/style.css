@@ -4,5 +4,108 @@
 }
 
 body {
-    background-color: rgb(198, 201, 199);
+    background-color: #f2f2f2;
+}
+
+/* Navbar */
+
+
+
+/* Landing Page */
+
+.landing{
+    height: 95vh;
+    background-image: url(images/Landing_bg.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+}
+
+.landing h1{
+    text-shadow: 2px 2px #000000;
+    padding-bottom: 2rem;  
+}
+
+
+/* Services section */
+
+.home-services{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.home-services h2{
+    padding: 2rem;
+}
+
+.services-cards{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.services-card{
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgb(26, 22, 102) 0%, rgba(9,9,121,1) 35%, rgb(0, 89, 255) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 1rem;
+    justify-content: center;
+    font-family: cursive;
+    font-size: 18px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+
+/* special deals */
+
+.special-deals{
+    display: flex;
+    width: 70vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin: 4rem auto;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.subscribe{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.email-text{
+    border: none;
+    height: 40px;
+    padding: 0.3rem;
+    width: 300px;
+    border: 2px solid black;
+    border-radius: 0.5rem;
+}
+
+.subscribe-btn{
+    height: 40px;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
 }
