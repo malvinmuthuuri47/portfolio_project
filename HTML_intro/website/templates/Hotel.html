@@ -1,0 +1,84 @@
+{% extends 'Base.html' %}
+
+{% block title %} name of hotel {% endblock %}
+
+{% block content %}
+
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+    
+    <section class="sidebar">
+        <a href="">Hotels in your area</a>
+        <a href="">Deals for you</a>
+        <a href="">Profile details </a>
+    </section>
+
+
+    <!-- Hotel details -->
+
+    <section class="hotel-details-container">
+        <h3 class="hotel-name">Paris Hilton Hotels</h3>
+        <div class="hotel-location">
+            <img src="../static/location.png" alt="">
+            <span>Somewhere farr away</span>
+        </div>
+        <div class="images-container">
+            <img src="../static/images/Hilton.webp" alt="">
+            <img src="../static/images/Hilton.webp" alt="">
+            <img src="../static/images/Hilton.webp" alt="">
+            <img src="../static/images/Hilton.webp" alt="">
+        </div>
+
+        <div class="hotel-details-flexer">
+            <div class="hotel-details">
+                <h4>Information about Paris Hilton Hotels</h4>
+                <div class="hotel-features">
+                    <div class="hotel-feature">
+                        Number of Rooms- 50
+                    </div>
+                    <div class="hotel-feature">Aircondition</div>
+                    <div class="hotel-feature">Tight Security</div>
+                    <div class="hotel-feature">Free Wifi</div>
+                    <div class="hotel-feature">Complimentary Breakfast</div>
+                </div>
+        
+                <div class="hotel-desc">
+                    <h6>Description</h6>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat eaque architecto minima debitis eveniet earum laborum cupiditate provident tenetur exercitationem sunt beatae dolorem praesentium eos repellendus, vel facilis totam. Optio assumenda iste eius tempore voluptatibus libero eaque sed magnam quis?
+                </div>
+    
+            </div>
+
+            <div class="booking">
+                <h4>Book rooms in Paris Hilton Hotel online</h4>
+                <div class="booking-details">
+                    <form action="" class="booking-form">
+                        
+                        <label for="book-date">Date</label>
+                        <input type="date" id="book-date">
+
+                        <label for="no-of-adults">Adults</label>
+                        <input type="number" id="no-of-adults" placeholder="1" required>
+
+                        <label for="rooms">No of rooms</label>
+                        <input type="number" required placeholder="1">
+
+                        <p>Enter your phone number to start the booking process</p>
+                        <input type="number" name="phone-number" id="phone-number" placeholder="+234 801 234 5678" required>
+                        
+                        <button type="submit" class="book-btn">Book Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+    </section>
+    
+
+</div>
+
+
+
+{% endblock %}
