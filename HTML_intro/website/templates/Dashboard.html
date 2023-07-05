@@ -11,19 +11,52 @@
     
     <section class="sidebar">
         <a href="">Hotels in your area</a>
+        <a href="">Deals for you</a>
         <a href="">Profile details </a>
     </section>
 
-    <section class="main-page">
-        <h2>Welcome *User's name*</h2>
 
-        <div class="area-hotels">
-            <div class="area-hotel">
-                <img src="" alt="">
-                <div class="name"></div>
-                <div class="location"></div>
-            </div>
-        </div>
+    <!-- main area -->
+
+    <section class="main-page">
+        <h5>Welcome *User's first-name*</h5>
+        <p>Here are the hottest deals in your area!</p>
+
+
+        <!-- Note that the classes are the same with that of the Popular deals page because they are basically the same styles -->
+
+        <div class="top-deals">
+            <a href="{{ url_for('views.hotel') }}" class="top-deal">
+                <img src="../static/images/Eko-Hotel.webp" alt="">
+                <div class="percentage-off">Up to 19% off</div>
+                <div class="top-deal-name">Eko Hotel and Suites</div>
+                <div class="location"><img src="../static/location.png" alt=""> Victoria Island, Lagos</div>
+            </a>
+            <a href="" class="top-deal">
+                <img src="../static/images/Eko-Hotel.webp" alt="">
+                <div class="percentage-off">Up to 19% off</div>
+                <div class="top-deal-name">Eko Hotel and Suites</div>
+                <div class="location"><img src="../static/location.png" alt=""> Victoria Island, Lagos</div>
+            </a>
+            <a href="" class="top-deal">
+                <img src="../static/images/Eko-Hotel.webp" alt="">
+                <div class="percentage-off">Up to 19% off</div>
+                <div class="top-deal-name">Eko Hotel and Suites</div>
+                <div class="location"><img src="../static/location.png" alt=""> Victoria Island, Lagos</div>
+            </a>
+            <a href="" class="top-deal">
+                <img src="../static/images/Eko-Hotel.webp" alt="">
+                <div class="percentage-off">Up to 19% off</div>
+                <div class="top-deal-name">Eko Hotel and Suites</div>
+                <div class="location"><img src="../static/location.png" alt=""> Victoria Island, Lagos</div>
+            </a>
+            <a href="" class="top-deal">
+                <img src="../static/images/Eko-Hotel.webp" alt="">
+                <div class="percentage-off">Up to 19% off</div>
+                <div class="top-deal-name">Eko Hotel and Suites</div>
+                <div class="location"><img src="../static/location.png" alt=""> Victoria Island, Lagos</div>
+            </a>
+    
     </section>
 
 </div>
