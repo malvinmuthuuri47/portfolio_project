@@ -7,6 +7,11 @@ body {
     background-color: #f2f2f2;
 }
 
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
 /* Navbar */
 
 
@@ -149,4 +154,78 @@ body {
 .popular-hotel div{
     text-align: center;
     font-weight: 500;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-direction: row;
+    position: relative;
+}
+
+.search-text{
+    width: 60vw;
+    height: 34px;
+    padding-left: 3rem;
+}
+
+.search-btn{
+    padding: 0.3rem;
+    border-radius: 4px;
+    height: 40px;
+}
+
+.search-icon{
+    height: 28px;
+    position: relative;
+    left: 40px;
+}
+
+/* Top deals section */
+
+.top-deals-container{
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+}
+
+.top-deals{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.top-deal{
+    position: relative;
+    border: 1px solid gray;
+    border-radius: 0.5rem;
+}
+
+.top-deal > img{
+    width: 300px;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.top-deal-name{
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.location{
+    font-style: italic;
+}
+
+.percentage-off{
+    position: absolute;
+    top: 8px;
+    left: -10px;
+    background-color: yellow;
+    font-size: 18px;
+    padding: 3px 5px;
 }
