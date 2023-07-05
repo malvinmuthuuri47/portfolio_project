@@ -3,15 +3,34 @@
 {% block title %} DashBoard {% endblock %}
 
 {% block content %}
-<p>
-    Here, we can place all images that we want to show on our website
-    to make it appealing to the user. This will be an overview of all the facilities and services that are offered.
-</p>
-<br />
-<p>
-    We can place caveats here to ask the user to login so that they can access the services offered by our website.
-</p>
-<h2>
-    Just to be clear, this is the DashBoard where we can allow users to book hotels.
-</h2>
+
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+    
+    <section class="sidebar">
+        <a href="">Hotels in your area</a>
+        <a href="">Profile details </a>
+    </section>
+
+    <section class="main-page">
+        <h2>Welcome *User's name*</h2>
+
+        <div class="area-hotels">
+            <div class="area-hotel">
+                <img src="" alt="">
+                <div class="name"></div>
+                <div class="location"></div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<!-- Hotels close to you -->
+
+<!-- user profile -->
+
+
 {% endblock %}
