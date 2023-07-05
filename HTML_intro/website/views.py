@@ -15,3 +15,7 @@ def dashboard():
 @views.route('/pricing')
 def pricing():
     return render_template('Pricing.html')
+
+@views.route('/hotel')
+def hotel():
+    return render_template('Hotel.html')
