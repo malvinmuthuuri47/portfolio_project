@@ -115,6 +115,76 @@ a{
     border: none;
 }
 
+/* About section */
+
+.github-link a, .about-section a{
+    text-decoration: underline;
+    color: rgb(85, 0, 255);
+}
+
+.about-section{
+    background-color: #121212;
+    padding: 4rem 2rem;
+    text-align: center;
+    color: #e2e2e2;
+    margin: 3rem 0rem 2rem 0;
+}
+
+.about-section h4{
+    padding-bottom: 2rem;
+}
+
+
+.github-link{
+    background:  #111111;
+    color: #e2e2e2;
+    text-align: center;
+    font-size: 18px;
+    padding: 2rem;
+}
+
+
+
+/* Team Section */
+
+.team-section h3{
+    text-align: center;
+    margin: 2rem;
+}
+
+.team-section{
+    padding: 2rem;
+}
+
+.member-desc img{
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.team-member-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.member-name{
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.team-socials{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+}
+
+
+
 
 /* Popular Hotels */
 
