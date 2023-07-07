@@ -1,10 +1,10 @@
 {% extends 'Base.html' %}
 
-{% block title %} DashBoard {% endblock %}
+{% block title %} Name of Hotel {% endblock %}
 
 {% block content %}
 
-
+{% for hotel in hotels %}
 <div class="dashboard">
 
     <!-- Sidebar -->
@@ -12,58 +12,86 @@
     <section class="sidebar">
         <a href="">Hotels in your area</a>
         <a href="">Deals for you</a>
-        <a href="">Profile details </a>
+        <a href="{{ url_for('auth.profile') }}">Profile details </a>
     </section>
 
 
-    <!-- main area -->
-
-    <section class="main-page">
-        <h5>Welcome *User's first-name*</h5>
-        <p>Here are the hottest deals in your area!</p>
+    <!-- Hotel details -->
 
 
-        <!-- Note that the classes are the same with that of the Popular deals page because they are basically the same styles -->
+    <section class="hotel-details-container">
+        <h3 class="hotel-name">{{ hotel.name }} Hotel</h3>
+        <div class="hotel-location">
+            <img src="../static/location.png" alt="">
+            <span>{{ hotel.location }}</span>
+        </div>
+        <div class="images-container">
+            <img src="{{ url_for('static', filename='images/' + hotel.image) }}" alt="Db image">
+            <img src="{{ url_for('static', filename='images/' + hotel.image) }}" alt="Db image">
+            <img src="{{ url_for('static', filename='images/' + hotel.image) }}" alt="Db image">
+            <img src="{{ url_for('static', filename='images/' + hotel.image) }}" alt="Db image">
+        </div>
 
-        <div class="top-deals">
-            <a href="{{ url_for('views.hotel') }}" class="top-deal">
-                <img src="../static/images/Eko-Hotel.webp" alt="">
-                <div class="percentage-off">Up to 19% off</div>
-                <div class="top-deal-name">Eko Hotel and Suites</div>
-                <div class="location"><img src="../static/location.png" alt=""> Victoria Island, Lagos</div>
-            </a>
-            <a href="" class="top-deal">
-                <img src="../static/images/Eko-Hotel.webp" alt="">
-                <div class="percentage-off">Up to 19% off</div>
-                <div class="top-deal-name">Eko Hotel and Suites</div>
-                <div class="location"><img src="../static/location.png" alt=""> Victoria Island, Lagos</div>
-            </a>
-            <a href="" class="top-deal">
-                <img src="../static/images/Eko-Hotel.webp" alt="">
-                <div class="percentage-off">Up to 19% off</div>
-                <div class="top-deal-name">Eko Hotel and Suites</div>
-                <div class="location"><img src="../static/location.png" alt=""> Victoria Island, Lagos</div>
-            </a>
-            <a href="" class="top-deal">
-                <img src="../static/images/Eko-Hotel.webp" alt="">
-                <div class="percentage-off">Up to 19% off</div>
-                <div class="top-deal-name">Eko Hotel and Suites</div>
-                <div class="location"><img src="../static/location.png" alt=""> Victoria Island, Lagos</div>
-            </a>
-            <a href="" class="top-deal">
-                <img src="../static/images/Eko-Hotel.webp" alt="">
-                <div class="percentage-off">Up to 19% off</div>
-                <div class="top-deal-name">Eko Hotel and Suites</div>
-                <div class="location"><img src="../static/location.png" alt=""> Victoria Island, Lagos</div>
-            </a>
+        <div class="hotel-details-flexer">
+            <div class="hotel-details">
+                <h4>Details of {{ hotel.name }} Hotel:</h4>
+                <div class="hotel-features">
+                    <div class="hotel-feature">
+                        Number of Rooms: {{ hotel.rooms }}
+                    </div>
+                    <div class="hotel-feature">
+                        Price per Night: {{ hotel.price }}$
+                    </div>
+                    <div class="hotel-feature">
+                        {% set data = hotel.services %}
+                        {% for word in data.split(",") %}
+                            {% if loop.first %}
+                                {{ word.strip() }}
+                            {% else %}
+                                <br>{{ word.strip() }}
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+        
+                <div class="hotel-desc">
+                    <h6>Description</h6>
+                    {% set text = hotel.description %}
+                    {% set modified_text = text|replace('.', '.<br><br>') %}
+
+                    {{ modified_text|safe }}
+                </div>
+    
+            </div>
+
+            <div class="booking">
+                <h4>Book rooms in {{ hotel.name }} Hotels online</h4>
+                <div class="booking-details">
+                    <form action="" class="booking-form">
+                        
+                        <label for="book-date">Date</label>
+                        <input type="date" id="book-date">
+
+                        <label for="no-of-adults">Adults</label>
+                        <input type="number" id="no-of-adults" placeholder="1" required>
+
+                        <label for="rooms">No of rooms</label>
+                        <input type="number" required placeholder="1">
+
+                        <p>Enter your phone number to start the booking process</p>
+                        <input type="number" name="phone-number" id="phone-number" placeholder="+234 801 234 5678" required>
+                        
+                        <button type="submit" class="book-btn" onclick="showAlert()">Book Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     
     </section>
+    
 
 </div>
-
-<!-- Hotels close to you -->
-
-<!-- user profile -->
+{% endfor %}
 
 
 {% endblock %}

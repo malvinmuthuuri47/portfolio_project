@@ -1,0 +1,12 @@
+{% extends 'Base.html' %}
+
+{% block title %} Profile {% endblock %}
+
+{% block content %}
+    <p>Here are your profile details. You can edit them as you like.</p>
+    <p>Email: {{ user.email }}</p>
+    <p>First Name: {{ user.firstName }}</p>
+    <p>Last Name: {{ user.lastName }}</p>
+    <br />
+    <a href="{{ url_for('views.dashboard') }}" class="btn btn-primary">Back to Dashboard</a>
+{% endblock %}
