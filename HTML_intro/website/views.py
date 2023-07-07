@@ -16,7 +16,8 @@ def dashboard():
 
 @views.route('/deals')
 def deals():
-    return render_template('Pricing.html', )
+    hotels = Hotels.query.all()
+    return render_template('Pricing.html', hotels=hotels)
 
 @views.route('/hotel')
 def hotel():

@@ -17,38 +17,11 @@
     <h3>This Week's Top Deals</h3>
     <p>A selection of the best deals, only available this week</p>
     <div class="top-deals">
-        <a href="" class="top-deal">
-            <img src="../static/images/Eko-Hotel.webp" alt="">
-            <div class="percentage-off">Up to 19% off</div>
-            <div class="top-deal-name">Eko Hotel and Suites</div>
-            <div class="location"><img src="../static/location.png" alt=""> Victoria Island, Lagos</div>
+        <a href="{{ url_for('views.dashboard') }}" class="top-deal">
+            {% for hotel in hotels %}
+            <p><img src="{{ url_for('static', filename='images/' + hotel.image) }}" alt="Db image"></p>
+            {% endfor %}
         </a>
-        <a href="" class="top-deal">
-            <img src="../static/images/Eko-Hotel.webp" alt="">
-            <div class="percentage-off">Up to 19% off</div>
-            <div class="top-deal-name">Eko Hotel and Suites</div>
-            <div class="location"><img src="../static/location.png" alt=""> Victoria Island, Lagos</div>
-        </a>
-        <a href="" class="top-deal">
-            <img src="../static/images/Eko-Hotel.webp" alt="">
-            <div class="percentage-off">Up to 19% off</div>
-            <div class="top-deal-name">Eko Hotel and Suites</div>
-            <div class="location"><img src="../static/location.png" alt=""> Victoria Island, Lagos</div>
-        </a>
-        <a href="" class="top-deal">
-            <img src="../static/images/Eko-Hotel.webp" alt="">
-            <div class="percentage-off">Up to 19% off</div>
-            <div class="top-deal-name">Eko Hotel and Suites</div>
-            <div class="location"><img src="../static/location.png" alt=""> Victoria Island, Lagos</div>
-        </a>
-        <a href="" class="top-deal">
-            <img src="../static/images/Eko-Hotel.webp" alt="">
-            <div class="percentage-off">Up to 19% off</div>
-            <div class="top-deal-name">Eko Hotel and Suites</div>
-            <div class="location"><img src="../static/location.png" alt=""> Victoria Island, Lagos</div>
-        </a>
-
-
         
     </div>
 </section>
