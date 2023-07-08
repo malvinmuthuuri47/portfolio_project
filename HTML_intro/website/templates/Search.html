@@ -1,0 +1,32 @@
+{% extends 'Base.html' %}
+
+{% block title %} Hotels in Your Area {% endblock %}
+
+{% block content %}
+    <h2>Search Results:</h2>
+    {% if hotels_location %}
+        <ul>
+            {% for hotel in hotels_location %}
+                <p><img src="{{ url_for('static', filename='images/' + hotel.image) }}" alt="Db image"></p>
+                <p>Name: {{ hotel.name }} </p>
+                <p>Location: {{ hotel.location }}</p>
+                <p>Address: {{ hotel.address }}</p>
+                <p>Price: {{ hotel.price }}</p>
+                <p>Services: {{ hotel.services }}</p>
+            {% endfor %}
+        </ul>
+    {% elif hotels_price %}
+        {% for hotel in hotels_price %}
+            <p>Name: {{ hotel.name }}</p>
+            <p>Location: {{ hotel.location }}</p>
+            <p>Address: {{ hotel.address }}</p>
+            <p>Price: {{ hotel.price }}</p>
+            <p>Services: {{ hotel.services }}</p>
+        {% endfor %}
+    {% else %}
+        <p>No hotels found within that area</p>
+    {% endif %}
+
+    <br />
+    <a href="{{ url_for('views.dashboard') }}" class="btn btn-primary">Back to Dashboard</a>
+{% endblock %}

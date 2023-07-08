@@ -16,5 +16,8 @@ class Hotels(db.Model):
     location = db.Column(db.String(100), nullable=False)
     address = db.Column(db.String(250), nullable=False, unique=True)
     price = db.Column(db.Integer, nullable=False)
+    rooms = db.Column(db.Integer, nullable=False)
     services = db.Column(db.String(250))
+    description = db.Column(db.Text, nullable=False)
+    image = db.Column(db.String(100))
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
