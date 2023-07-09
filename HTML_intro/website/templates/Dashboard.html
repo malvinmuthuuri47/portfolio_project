@@ -4,21 +4,20 @@
 
 {% block content %}
 
-{% for hotel in hotels %}
 <div class="dashboard">
 
     <!-- Sidebar -->
     
     <section class="sidebar">
-        <a href="">Hotels in your area</a>
-        <a href="">Deals for you</a>
+        <a href="{{ url_for('views.dashboard') }}">Hotels in your area</a>
+        <a href="" onclick="alert('Feature coming soon')">Deals for you</a>
         <a href="{{ url_for('auth.profile') }}">Profile details </a>
     </section>
 
 
     <!-- Hotel details -->
 
-
+    {% for hotel in hotels %}
     <section class="hotel-details-container">
         <h3 class="hotel-name">{{ hotel.name }} Hotel</h3>
         <div class="hotel-location">
