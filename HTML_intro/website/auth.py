@@ -45,7 +45,6 @@ def login():
     if request.method == 'POST':
         email = request.form.get('email')
         password = request.form.get('password')
-
         user = User.query.filter_by(email=email).first()
         if user:
             if check_password_hash(user.password, password):
@@ -62,7 +61,18 @@ def login():
 @login_required
 def profile():
     user = User.query.all()
-    return render_template('Profile.html', user=current_user)
+    if request.method == 'POST':
+        current_user.email = request.form.get('email')
+        current_user.firstName = request.form.get('firstName')
+        current_user.lastName = request.form.get('lastName')
+
+        try:
+            db.session.commit()
+            return redirect('/dashboard')
+        except:
+            return "Update unsuccessful"
+    else:
+        return render_template('Profile.html', user=current_user)
 
 @auth.route('/search', methods=['GET'])
 @login_required
