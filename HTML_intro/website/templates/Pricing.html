@@ -4,6 +4,8 @@
 
 {% block content %}
 
+<h2 class="big-header">Hotels.ng</h2>
+
 <form action="" class="search">
     <img src="../static/search.png" alt="" class="search-icon">
     <input type="text" name="" class="search-text" placeholder="Find a hotel">
@@ -16,14 +18,53 @@
 <section class="top-deals-container">
     <h3>This Week's Top Deals</h3>
     <p>A selection of the best deals, only available this week</p>
+   
+
+    <!-- I temporarily hardcoded it because we werent generating the names of each hotels and their pricing -->
+
+    <!-- <div class="top-deals">
+        {% for hotel in hotels %}
+        <a href="{{ url_for('views.dashboard') }}" class="top-deal">
+            <img src="{{ url_for('static', filename='images/' + hotel.image) }}" alt="Db image">
+        </a>
+        {% endfor %}
+        
+    </div> -->
+
+
     <div class="top-deals">
         <a href="{{ url_for('views.dashboard') }}" class="top-deal">
-            {% for hotel in hotels %}
-            <p><img src="{{ url_for('static', filename='images/' + hotel.image) }}" alt="Db image"></p>
-            {% endfor %}
+            <img src="../static/images/Hilton.webp" alt="">
+            <div class="percentage-off">Up to 25% off</div>
+            <div class="top-deal-name">Transcorp Hilton, Abuja</div>
+            <div class="location"><img src="../static/location.png" alt=""> Abuja</div>
         </a>
-        
-    </div>
+        <a href="{{ url_for('views.dashboard') }}" class="top-deal">
+            <img src="../static/images/Eko-Hotel.webp" alt="">
+            <div class="percentage-off">Up to 19% off</div>
+            <div class="top-deal-name">Eko Hotel and Suites</div>
+            <div class="location"><img src="../static/location.png" alt=""> Victoria Island, Lagos</div>
+        </a>
+        <a href="{{ url_for('views.dashboard') }}" class="top-deal">
+            <img src="../static/images/Federal-palace.webp" alt="">
+            <div class="percentage-off">Up to 10% off</div>
+            <div class="top-deal-name">The Federal Palace Hotel</div>
+            <div class="location"><img src="../static/location.png" alt=""> Ahmadu Bello Street, Victoria Island</div>
+        </a>
+        <a href="{{ url_for('views.dashboard') }}" class="top-deal">
+            <img src="../static/images/Oriental.webp" alt="">
+            <div class="percentage-off">Up to 19% off</div>
+            <div class="top-deal-name">Lagos Oriental Hotel</div>
+            <div class="location"><img src="../static/location.png" alt=""> Victoria Island, Lagos</div>
+        </a>
+        <a href="{{ url_for('views.dashboard') }}" class="top-deal">
+            <img src="../static/images/Sheraton.webp" alt="">
+            <div class="percentage-off">Up to 19% off</div>
+            <div class="top-deal-name">Sheraton Hotel</div>
+            <div class="location"><img src="../static/location.png" alt=""> Ikeja, Lagos State</div>
+        </a>
+
+
 </section>
 
 
