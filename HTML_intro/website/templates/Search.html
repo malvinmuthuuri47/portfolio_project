@@ -7,11 +7,10 @@
     {% if hotels_location %}
         <ul>
             {% for hotel in hotels_location %}
-                <p><img src="{{ url_for('static', filename='images/' + hotel.image) }}" alt="Db image"></p>
-                <p>Name: {{ hotel.name }} </p>
-                <p>Location: {{ hotel.location }}</p>
-                <p>Address: {{ hotel.address }}</p>
-                <p>Price: {{ hotel.price }}</p>
+                <p><img src="{{ url_for('static', filename='images/' + hotel.image) }}" alt="Hotel image" class="search-img"></p>
+                <h4> {{ hotel.name }} </h4>
+                <div><img src="../static/location.png" alt="">{{ hotel.address }}, {{ hotel.location }}</div>
+                <p>Price: #{{ hotel.price }}</p>
                 <p>Services: {{ hotel.services }}</p>
             {% endfor %}
         </ul>
