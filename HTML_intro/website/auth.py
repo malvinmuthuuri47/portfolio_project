@@ -68,6 +68,7 @@ def profile():
 
         try:
             db.session.commit()
+            flash('Profile updated')
             return redirect('/dashboard')
         except:
             return "Update unsuccessful"
