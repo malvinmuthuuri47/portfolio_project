@@ -4,20 +4,21 @@
 
 {% block content %}
 
+{% for hotel in hotels %}
 <div class="dashboard">
 
     <!-- Sidebar -->
     
     <section class="sidebar">
-        <a href="{{ url_for('views.dashboard') }}">Hotels in your area</a>
-        <a href="" onclick="alert('Feature coming soon')">Deals for you</a>
+        <a href="">Hotels in your area</a>
+        <a href="">Deals for you</a>
         <a href="{{ url_for('auth.profile') }}">Profile details </a>
     </section>
 
 
     <!-- Hotel details -->
 
-    {% for hotel in hotels %}
+
     <section class="hotel-details-container">
         <h3 class="hotel-name">{{ hotel.name }} Hotel</h3>
         <div class="hotel-location">
@@ -25,10 +26,10 @@
             <span>{{ hotel.location }}</span>
         </div>
         <div class="images-container">
-            <img src="{{ url_for('static', filename='images/' + hotel.image) }}" alt="Db image">
-            <img src="{{ url_for('static', filename='images/' + hotel.image) }}" alt="Db image">
-            <img src="{{ url_for('static', filename='images/' + hotel.image) }}" alt="Db image">
-            <img src="{{ url_for('static', filename='images/' + hotel.image) }}" alt="Db image">
+            <img src="../static/images/Hilton.webp" alt="">
+            <img src="../static/images/Hilton.webp" alt="">
+            <img src="../static/images/Hilton.webp" alt="">
+            <img src="../static/images/Hilton.webp" alt="">
         </div>
 
         <div class="hotel-details-flexer">
@@ -37,9 +38,6 @@
                 <div class="hotel-features">
                     <div class="hotel-feature">
                         Number of Rooms: {{ hotel.rooms }}
-                    </div>
-                    <div class="hotel-feature">
-                        Price per Night: {{ hotel.price }}$
                     </div>
                     <div class="hotel-feature">
                         {% set data = hotel.services %}
@@ -55,10 +53,7 @@
         
                 <div class="hotel-desc">
                     <h6>Description</h6>
-                    {% set text = hotel.description %}
-                    {% set modified_text = text|replace('.', '.<br><br>') %}
-
-                    {{ modified_text|safe }}
+                    {{ hotel.description }}
                 </div>
     
             </div>

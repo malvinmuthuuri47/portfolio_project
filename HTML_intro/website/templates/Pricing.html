@@ -1,9 +1,110 @@
 {% extends 'Base.html' %}
 
-{% block title %} Pricing {% endblock %}
+{% block title %} Hot Deals {% endblock %}
 
 {% block content %}
-<p>
+
+<h2 class="big-header">Hotels.ng</h2>
+
+<form action="" class="search">
+    <img src="../static/search.png" alt="" class="search-icon">
+    <input type="text" name="" class="search-text" placeholder="Find a hotel">
+    <button class="search-btn">Find Hotels</button>
+</form>
+
+
+<!-- Top Deals -->
+
+<section class="top-deals-container">
+    <h3>This Week's Top Deals</h3>
+    <p>A selection of the best deals, only available this week</p>
+   
+
+    <!-- I temporarily hardcoded it because we werent generating the names of each hotels and their pricing -->
+
+    <!-- <div class="top-deals">
+        {% for hotel in hotels %}
+        <a href="{{ url_for('views.dashboard') }}" class="top-deal">
+            <img src="{{ url_for('static', filename='images/' + hotel.image) }}" alt="Db image">
+        </a>
+        {% endfor %}
+        
+    </div> -->
+
+
+    <div class="top-deals">
+        <a href="{{ url_for('views.dashboard') }}" class="top-deal">
+            <img src="../static/images/Hilton.webp" alt="">
+            <div class="percentage-off">Up to 25% off</div>
+            <div class="top-deal-name">Transcorp Hilton, Abuja</div>
+            <div class="location"><img src="../static/location.png" alt=""> Abuja</div>
+        </a>
+        <a href="{{ url_for('views.dashboard') }}" class="top-deal">
+            <img src="../static/images/Eko-Hotel.webp" alt="">
+            <div class="percentage-off">Up to 19% off</div>
+            <div class="top-deal-name">Eko Hotel and Suites</div>
+            <div class="location"><img src="../static/location.png" alt=""> Victoria Island, Lagos</div>
+        </a>
+        <a href="{{ url_for('views.dashboard') }}" class="top-deal">
+            <img src="../static/images/Federal-palace.webp" alt="">
+            <div class="percentage-off">Up to 10% off</div>
+            <div class="top-deal-name">The Federal Palace Hotel</div>
+            <div class="location"><img src="../static/location.png" alt=""> Ahmadu Bello Street, Victoria Island</div>
+        </a>
+        <a href="{{ url_for('views.dashboard') }}" class="top-deal">
+            <img src="../static/images/Oriental.webp" alt="">
+            <div class="percentage-off">Up to 19% off</div>
+            <div class="top-deal-name">Lagos Oriental Hotel</div>
+            <div class="location"><img src="../static/location.png" alt=""> Victoria Island, Lagos</div>
+        </a>
+        <a href="{{ url_for('views.dashboard') }}" class="top-deal">
+            <img src="../static/images/Sheraton.webp" alt="">
+            <div class="percentage-off">Up to 19% off</div>
+            <div class="top-deal-name">Sheraton Hotel</div>
+            <div class="location"><img src="../static/location.png" alt=""> Ikeja, Lagos State</div>
+        </a>
+
+
+</section>
+
+
+<!-- popular locations -->
+
+<section>
+    <h3 class="popular-hotel-header">Popular Hotels to visit in Nigeria</h3>
+    <div class="popular-hotel-container">
+        <div class="popular-hotel">
+            <img src="../static/images/Hilton.webp" alt="">
+            <div>Transcorp Hilton, Abuja</div>
+        </div>
+        <div class="popular-hotel">
+            <img src="../static/images/WheatBaker.webp" alt="">
+            <div>The WheatBaker Hotel, Lagos</div>
+        </div>
+        <div class="popular-hotel">
+            <img src="../static/images/Eko-Hotel.webp" alt="">
+            <div>Eko Hotel and Suites</div>
+        </div>
+        <div class="popular-hotel">
+            <img src="../static/images/Oriental.webp" alt="">
+            <div>Lagos Oriental Hotel</div>
+        </div>
+        <div class="popular-hotel">
+            <img src="../static/images/Sheraton.webp" alt="">
+            <div>Sheraton Hotels</div>
+        </div>
+        <div class="popular-hotel">
+            <img src="../static/images/Federal-palace.webp" alt="">
+            <div>Federal Palace Hotel and Casino</div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<!-- <p>
     Welcome. In this page, you will find the specific details of each and every facility we have along with the prices and services offered at each facility.
 </p>
 <p>
@@ -12,5 +113,5 @@
 <h3>
     We can show users the prices of various bookings without them having to login here but to book, they will be required to login/signup.
     It will be similar to the dashboard only that in the dashboard page, the user will be able to book a hotel so let's advertise the amenities in this page.
-</h3>
+</h3> -->
 {% endblock %}
