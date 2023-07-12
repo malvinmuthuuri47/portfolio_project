@@ -10,18 +10,21 @@
                 <p><img src="{{ url_for('static', filename='images/' + hotel.image) }}" alt="Hotel image" class="search-img"></p>
                 <h4> {{ hotel.name }} </h4>
                 <div><img src="../static/location.png" alt="">{{ hotel.address }}, {{ hotel.location }}</div>
-                <p>Price: #{{ hotel.price }}</p>
+                <p>Price: {{ hotel.price }} $</p>
                 <p>Services: {{ hotel.services }}</p>
+                <p></p>
             {% endfor %}
         </ul>
     {% elif hotels_price %}
-        {% for hotel in hotels_price %}
-            <p>Name: {{ hotel.name }}</p>
-            <p>Location: {{ hotel.location }}</p>
-            <p>Address: {{ hotel.address }}</p>
-            <p>Price: {{ hotel.price }}</p>
+        <ul>
+            {% for hotel in hotels_price %}
+            <p><img src="{{ url_for('static', filename='images/' + hotel.image) }}" alt="Hotel image" class="search-img"></p>
+            <h4> {{ hotel.name }} </h4>
+            <div><img src="../static/location.png" alt="">{{ hotel.address }}, {{ hotel.location }}</div>
+            <p>Price: {{ hotel.price }} $</p>
             <p>Services: {{ hotel.services }}</p>
         {% endfor %}
+        </ul>
     {% else %}
         <p>No hotels found within that area</p>
     {% endif %}

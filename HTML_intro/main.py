@@ -5,4 +5,4 @@ from website.models import User, Hotels
 app = create_app()  # Instantiate the function that instantiates the flask app
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
