@@ -10,7 +10,6 @@ app = Flask(__name__)   # instantiate Flask class to initiate the app.
 
 def create_app():
     # initiate the flask app and database
-    #app = Flask(__name__)
     app.config['SECRET_KEY'] = 'Thisisthekey'   # This variable is used to securely sign cookies securely and cryptographic operations
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///{}'.format(DB_NAME)  # The connection string for the db that flask app will connect to
     db.init_app(app)    # initialize SQLALCHEMY extension with the Flask application
