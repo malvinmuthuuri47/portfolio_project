@@ -8,7 +8,7 @@ class User(db.Model, UserMixin):
     firstName = db.Column(db.String(50), nullable=False)
     lastName = db.Column(db.String(50), nullable=False)
     password = db.Column(db.String(80), nullable=False)
-    hotels = db.relationship('Hotels')
+    hotels = db.relationship('Hotels')  # This creates a one to many relationships to the Hotels table
 
 class Hotels(db.Model):
     id = db.Column(db.Integer, primary_key=True)

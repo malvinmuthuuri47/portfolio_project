@@ -9,6 +9,12 @@ auth = Blueprint('auth', __name__)
 
 @auth.route('/signup', methods=['GET', 'POST'])
 def signup():
+    """
+    Function that handles the signup page. It gets the details from the form and checks if they exist in the database
+    If the email exists, the user is asked to enter another email as email field is unique. It also checks if the first
+    and last name are strings and also if the passwords entered are the same.
+    If the email doesn't exist, the user is added to the database and allowed to access the website's dashboard.
+    """
     if request.method == 'POST':
         email = request.form.get('email')
         firstName = request.form.get('firstName')
@@ -42,6 +48,10 @@ def signup():
 
 @auth.route('/login', methods=['GET', 'POST'])
 def login():
+    """
+    This function queries the database when the user enters their email and password. If the user exists in the database,
+    they are logged in and if not, they are asked to signup or entera valid email/password
+    """
     if request.method == 'POST':
         email = request.form.get('email')
         password = request.form.get('password')
@@ -58,8 +68,12 @@ def login():
     return render_template('Login.html', user=current_user)
 
 @auth.route('/profile', methods=['GET', 'POST'])
-@login_required
+@login_required # This decorator just ensures that the function can only be accessed if the user is logged in
 def profile():
+    """
+    This function is responsible for allowing an existing user to alter the specific details of their profile
+    including the email, first and last name.
+    """
     user = User.query.all()
     if request.method == 'POST':
         current_user.email = request.form.get('email')
@@ -78,6 +92,11 @@ def profile():
 @auth.route('/search', methods=['GET'])
 @login_required
 def search():
+    """
+    This function is responsible for filtering the results of hotels based on price and location when the user
+    wished to see the hotels available in a certain location should they choose to search rather than scrolling
+    through the entire website.
+    """
     search_term_location = request.args.get('location')
     search_term_price = request.args.get('price')
 
@@ -99,5 +118,6 @@ def search():
 @auth.route('/logout')
 @login_required
 def logout():
+    # This function is responsible for logging out a user and redirecting them ot the login page.
     logout_user()
     return redirect(url_for('auth.login'))
