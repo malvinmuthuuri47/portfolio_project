@@ -168,6 +168,8 @@ a{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .member-name{
@@ -196,6 +198,7 @@ a{
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    margin-bottom: 2rem;
 }
 
 .popular-hotel-header{
@@ -372,6 +375,7 @@ a{
 .hotel-details-container{
     flex: 3;
     padding: 2rem;
+    border: 1px solid gray;
 }
 
 .images-container{
@@ -388,6 +392,7 @@ a{
 .hotel-details-flexer{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 3rem;
     align-items: flex-start;
@@ -479,10 +484,86 @@ a{
     margin: 0.5rem 0; 
 }
 
+.profile-sidebar a{
+    padding: 6px;
+}
 
 /* Search */
 
 .search-img{
     max-width: 500px;
     border-radius: 0.5rem;
+}
+
+
+
+
+
+
+/* Media Queries for responsiveness */
+
+@media screen and (max-width: 1048px) {
+
+    .landing{
+        padding: 1rem;
+        text-align: center;
+        color: white;
+    }
+
+    .landing h4{
+        background: rgba(0, 0 , 0, 0.2);
+        backdrop-filter: blur(5px);
+        border-radius: 1rem;
+        padding: 0.3rem;      
+    }
+
+    .dashboard, .profile-dashboard{
+        flex-direction: column;
+    }
+
+    .sidebar, .profile-sidebar{
+        flex-direction: row;
+        height: auto;
+        width: 100%;
+        padding: 0.3rem 0;
+    }
+
+    .sidebar a, .profile-sidebar a{
+        border: 1px solid gray;
+    }
+
+    .sidebar a:hover, .profile-sidebar a:hover{
+        background-color: #121212;
+        color: white;
+        transition: 0.5s;
+    }
+
+    .images-container{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem 0;
+    }
+
+    .images-container img{
+        margin: 0.3rem;
+    }
+
+    .profile-main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .subscribe-btn{
+        display: flex;
+        margin: 0.5rem auto;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .hotel-details-flexer{
+        flex-direction: column;
+    }
 }
