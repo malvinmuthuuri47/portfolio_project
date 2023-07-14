@@ -27,7 +27,7 @@ After installing the requirements, you can now run the flask app by following th
         - In this case, run the following command on the terminal.(`export FLASK_APP=main`)
     3. Now, you can run the app by using the command, (`flask run`)
 
-Our simple slideshow explains all the technical challenges and the things we've learnt as we undertook this project. Here's the link:<br/> (`https://docs.google.com/presentation/d/1eoTIYZwasp3p92nHkPhW8iF5wDp8K0gvhPRE9JOEGXE/edit?usp=sharing`)
+Our simple slideshow explains all the technical challenges and the things we've learnt as we undertook this project. Here's the link:<br/> https://docs.google.com/presentation/d/1eoTIYZwasp3p92nHkPhW8iF5wDp8K0gvhPRE9JOEGXE/edit?usp=sharing
 
 Have fun
 
