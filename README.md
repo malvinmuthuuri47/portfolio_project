@@ -7,19 +7,19 @@ Its advised to run the requirements file on a virtual environment first before t
 
 To create a virtual environment differs depending on the Operating System you are using.
 For Linux Operating system, you can create a virtual environment using the following command:<br/>
-    python3 -m venv <preferred name of virtual environment>
+    (`python3 -m venv <preferred name of virtual environment>`)
 
 On windows Operating system, the command is as follows:<br/>
-    python -m venv <preferred name of virtual environment>
+    (`python -m venv <preferred name of virtual environment>`)
 
 On mac, the command is as follows:<br/>
-    python3 -m venv <prefered name of virtual environment>
+    (`python3 -m venv <prefered name of virtual environment>`)
 
 After creating the virtual environment, you have to activate it using this command:<br/>
-    source venv/lib/activate
+    (`source venv/lib/activate`)
 
 Now install the requirements but running the following command:<br/>
-    pip3/pip install -r requirements.txt
+    (`pip3/pip install -r requirements.txt`)
 
 After installing the requirements, you can now run the flask app by following these simple steps:<br/>
     1. Ensure you're in the directory containg the main.py file
